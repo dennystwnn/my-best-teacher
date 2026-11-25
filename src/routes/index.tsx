@@ -86,13 +86,6 @@ function Index() {
         </a>
       )}
 
-      <img
-        src={guruBerhijab}
-        alt="Ilustrasi guru berhijab membawa buku di samping papan tulis"
-        width={1024}
-        height={1024}
-        className="w-40 sm:w-52 animate-sway drop-shadow-2xl"
-      />
       <p className="font-hand text-2xl text-gold">25 November 2026</p>
       <h1 className="mt-1 font-display text-4xl text-chalk sm:text-6xl">Selamat Hari Guru</h1>
       <p className="mt-1 font-display text-2xl text-gold sm:text-3xl">Istriku Tercinta</p>
@@ -138,6 +131,14 @@ function Index() {
       ) : null}
 
       <p className="mt-10 font-hand text-xl text-muted-foreground">ketuk di mana saja untuk taburan cinta ✨</p>
+      <img
+        src={guruBerhijab}
+        alt=""
+        aria-hidden="true"
+        width={1024}
+        height={1024}
+        className="pointer-events-none fixed bottom-0 left-1/2 -z-10 w-72 -translate-x-1/2 opacity-25 animate-sway sm:left-8 sm:w-96 sm:translate-x-0"
+      />
       <div className="fixed inset-0 -z-10" onClick={() => burst(6)} />
     </main>
   );
