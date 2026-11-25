@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { createSoftMusic } from "@/lib/soft-music";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,6 +28,13 @@ const floaters = ["💖", "🌸", "⭐", "🍎", "✏️", "💛", "🌷"];
 function Index() {
   const [opened, setOpened] = useState(false);
   const [step, setStep] = useState(0);
+  const music = useRef<ReturnType<typeof createSoftMusic> | null>(null);
+  const [playing, setPlaying] = useState(false);
+  const toggleMusic = (on = !playing) => {
+    music.current ??= createSoftMusic();
+    if (on) music.current.play(); else music.current.pause();
+    setPlaying(on);
+  };
   const [bursts, setBursts] = useState<{ id: number; x: number; e: string; d: number }[]>([]);
 
   const burst = (n = 14) => {
@@ -54,13 +62,24 @@ function Index() {
         ))}
       </div>
 
+      {opened && (
+        <button
+          onClick={() => toggleMusic()}
+          aria-label={playing ? "Jeda musik" : "Putar musik"}
+          className="fixed right-4 top-4 z-40 flex items-center gap-2 rounded-full bg-card px-4 py-2 font-semibold text-card-foreground shadow-lg"
+        >
+          <span className={playing ? "animate-wiggle" : ""}>{playing ? "🎵" : "🔇"}</span>
+          {playing ? "Jeda" : "Putar"}
+        </button>
+      )}
+
       <p className="font-hand text-2xl text-gold">25 November 2026</p>
       <h1 className="mt-1 font-display text-4xl text-chalk sm:text-6xl">Selamat Hari Guru</h1>
       <p className="mt-2 font-hand text-3xl text-rose sm:text-4xl">Yefi Indah Wahyuni</p>
 
       {!opened ? (
         <button
-          onClick={() => { setOpened(true); burst(24); }}
+          onClick={() => { setOpened(true); burst(24); toggleMusic(true); }}
           className="mt-12 flex flex-col items-center gap-4 rounded-3xl bg-card px-10 py-10 text-card-foreground shadow-2xl transition hover:scale-105"
         >
           <span className="text-7xl animate-wiggle">💌</span>
