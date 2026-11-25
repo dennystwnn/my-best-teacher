@@ -73,6 +73,18 @@ function Index() {
         </button>
       )}
 
+      {opened && (
+        <a
+          href={`https://wa.me/?text=${encodeURIComponent(`Selamat Hari Guru, Yefi Indah Wahyuni! 💌 Ada ucapan spesial untukmu di sini: ${window.location.href}`)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Bagikan lewat WhatsApp"
+          className="fixed bottom-4 right-4 z-40 flex items-center gap-2 rounded-full bg-card px-4 py-2 font-semibold text-card-foreground shadow-lg transition hover:scale-105"
+        >
+          <span>💬</span> Bagikan
+        </a>
+      )}
+
       <p className="font-hand text-2xl text-gold">25 November 2026</p>
       <h1 className="mt-1 font-display text-4xl text-chalk sm:text-6xl">Selamat Hari Guru</h1>
       <p className="mt-1 font-display text-2xl text-gold sm:text-3xl">Istriku Tercinta</p>
