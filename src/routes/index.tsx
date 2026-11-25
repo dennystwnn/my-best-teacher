@@ -137,7 +137,7 @@ function Index() {
         aria-hidden="true"
         width={1024}
         height={1024}
-        className="pointer-events-none fixed bottom-0 left-1/2 -z-10 w-72 -translate-x-1/2 opacity-25 animate-sway sm:left-8 sm:w-96 sm:translate-x-0"
+        className="pointer-events-none fixed bottom-0 right-0 -z-10 w-36 opacity-25 animate-sway sm:left-8 sm:right-auto sm:w-80"
       />
       <div className="fixed inset-0 -z-10" onClick={() => burst(6)} />
     </main>
