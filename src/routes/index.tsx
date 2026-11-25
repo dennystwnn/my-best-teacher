@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 import { createSoftMusic } from "@/lib/soft-music";
+import guruBerhijab from "@/assets/guru-berhijab.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -85,6 +86,13 @@ function Index() {
         </a>
       )}
 
+      <img
+        src={guruBerhijab}
+        alt="Ilustrasi guru berhijab membawa buku di samping papan tulis"
+        width={1024}
+        height={1024}
+        className="w-40 sm:w-52 animate-sway drop-shadow-2xl"
+      />
       <p className="font-hand text-2xl text-gold">25 November 2026</p>
       <h1 className="mt-1 font-display text-4xl text-chalk sm:text-6xl">Selamat Hari Guru</h1>
       <p className="mt-1 font-display text-2xl text-gold sm:text-3xl">Istriku Tercinta</p>
