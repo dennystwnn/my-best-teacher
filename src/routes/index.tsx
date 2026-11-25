@@ -75,6 +75,7 @@ function Index() {
 
       <p className="font-hand text-2xl text-gold">25 November 2026</p>
       <h1 className="mt-1 font-display text-4xl text-chalk sm:text-6xl">Selamat Hari Guru</h1>
+      <p className="mt-1 font-display text-2xl text-gold sm:text-3xl">Istriku Tercinta</p>
       <p className="mt-2 font-hand text-3xl text-rose sm:text-4xl">Yefi Indah Wahyuni</p>
 
       {!opened ? (
