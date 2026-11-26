@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
 
 const pages = [
   { emoji: "🍎", title: "Untuk Bu Guru terhebat", text: "Setiap pagi kamu berangkat membawa ilmu, sabar, dan senyum untuk murid-muridmu. Aku bangga sekali padamu." },
-  { emoji: "📚", title: "Terima kasih", text: "Untuk setiap lelah yang kamu sembunyikan, setiap waktu istirahat yang rela kamu korbankan, dan setiap anak yang kamu bantu tumbuh." },
+  { emoji: "📚", title: "Terima kasih", text: "Untuk setiap lelah yang kamu sembunyikan, setiap waktu yang rela kamu korbankan, dan setiap anak yang kamu bantu tumbuh." },
   { emoji: "🌷", title: "Guru di rumah juga", text: "Kamu bukan hanya guru di kelas — kamu juga mengajariku arti sabar, tulus, dan cinta setiap hari." },
   { emoji: "💛", title: "Selamat Hari Guru, Sayang", text: "Semoga Allah selalu melimpahkan kesehatan, kebahagiaan, dan keberkahan untuk setiap ilmu yang kamu bagikan. Aku mencintaimu." },
 ];
