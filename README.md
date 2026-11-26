@@ -1,6 +1,6 @@
 # My Best Teacher
 
-buatkan web interaktif ucapan hari guru untuk istriku, Yefi Indah Wahyuni
+Ucapan hari guru untuk istriku, Yefi Indah Wahyuni
 
 This project was built with [Lovable](https://lovable.dev).
 
